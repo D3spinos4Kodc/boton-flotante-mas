@@ -49,6 +49,7 @@ body {
     right: 20px;
     flex-direction: column;
     align-items: center;
+    gap: 10px; /* Added space between buttons */
 }
 
 #btn-mas:checked ~ .botones-flotando {
@@ -63,7 +64,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 10px;
     text-align: center;
     font-size: 14px;
     color: #333;
@@ -77,8 +77,9 @@ body {
     transform: translateY(0);
 }
 
-.estetica { background-image: url('path/to/estetica.png'); }
-.higiene { background-image: url('path/to/higiene.png'); }
-.confort { background-image: url('path/to/confort.png'); }
-.funcionmuscular { background-image: url('path/to/funcionmuscular.png'); }
-.movimientodental { background-image: url('path/to/movimientodental.png'); }
+/* Placeholder for image backgrounds */
+.estetica { background-image: url('path/to/estetica.png'); background-size: cover; }
+.higiene { background-image: url('path/to/higiene.png'); background-size: cover; }
+.confort { background-image: url('path/to/confort.png'); background-size: cover; }
+.funcionmuscular { background-image: url('path/to/funcionmuscular.png'); background-size: cover; }
+.movimientodental { background-image: url('path/to/movimientodental.png'); background-size: cover; }
