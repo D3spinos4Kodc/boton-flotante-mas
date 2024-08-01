@@ -4,9 +4,9 @@ body {
 }
 
 #masBoton {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
+    position: absolute;
+    top: 50%;
+    right: 50%;
     z-index: 1000;
 }
 
@@ -39,7 +39,7 @@ body {
 }
 
 #btn-mas:checked + label {
-    transform: rotate(-45deg);
+    transform: rotate(-245deg);
 }
 
 .botones-flotando {
@@ -69,7 +69,7 @@ body {
     color: #333;
     transition: transform 0.3s, opacity 0.3s;
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(240px);
 }
 
 #btn-mas:checked ~ .botones-flotando .float-img {
