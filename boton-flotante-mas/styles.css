@@ -4,9 +4,9 @@ body {
 }
 
 #masBoton {
-    position: absolute;
-    top: 50%;
-    right: 50%;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
     z-index: 1000;
 }
 
@@ -14,72 +14,87 @@ body {
     display: flex;
     align-items: center;
     cursor: pointer;
-}
-
-#btn-mas {
-    display: none;
+    background-color: #f0f0f0;
+    border-radius: 50px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 #masfloat {
-    width: 40px;
-    height: 40px;
-    background-color: #007bff;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s;
+    font-size: 24px;
+    margin-right: 10px;
 }
 
 .textoFloat {
-    margin-left: 10px;
-    color: #007bff;
-    font-weight: bold;
+    font-size: 16px;
 }
 
-#btn-mas:checked + label {
-    transform: rotate(-245deg);
-}
-
-.botones-flotando {
+#btnfloat {
     display: none;
     position: fixed;
-    bottom: 80px;
+    bottom: 100px;
     right: 20px;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px; /* Added space between buttons */
+    z-index: 999;
 }
 
-#btn-mas:checked ~ .botones-flotando {
+#btn-mas:checked + .contfloat {
     display: flex;
+}
+
+.contfloat {
+    display: none;
+    justify-content: space-between;
+    background-color: #f7f7f7;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.flobn {
+    text-align: center;
+    flex: 1;
 }
 
 .float-img {
-    width: 106px;
-    height: 106px;
-    background-color: #f0f0f0;
+    width: 100px;
+    height: 100px;
+    background-color: #dcdcdc;
     border-radius: 50%;
     display: flex;
-    align-items: center;
     justify-content: center;
-    text-align: center;
-    font-size: 14px;
+    align-items: center;
+    margin: 10px;
+    transition: background 0.3s ease;
+    cursor: pointer;
+}
+
+.float-img span {
+    display: block;
     color: #333;
-    transition: transform 0.3s, opacity 0.3s;
-    opacity: 0;
-    transform: translateY(240px);
+    font-size: 14px;
 }
 
-#btn-mas:checked ~ .botones-flotando .float-img {
-    opacity: 1;
-    transform: translateY(0);
+.float-img:hover {
+    background-size: cover;
+    background-position: center;
 }
 
-/* Placeholder for image backgrounds */
-.estetica { background-image: url('path/to/estetica.png'); background-size: cover; }
-.higiene { background-image: url('path/to/higiene.png'); background-size: cover; }
-.confort { background-image: url('path/to/confort.png'); background-size: cover; }
-.funcionmuscular { background-image: url('path/to/funcionmuscular.png'); background-size: cover; }
-.movimientodental { background-image: url('path/to/movimientodental.png'); background-size: cover; }
+.float-img.estetica:hover {
+    background-image: url("assets/icono-confort-3d.png.webp");
+}
+
+.float-img.higiene:hover {
+    background-image: url("assets/icono-estetica-3d.png");
+}
+
+.float-img.confort:hover {
+    background-image: url("assets/icono-funcion-muscular-3d.png.webp");
+}
+
+.float-img.funcionmuscular:hover {
+    background-image: url("assets/icono-higiene-3d.png.webp");
+}
+
+.float-img.movimientodental:hover {
+    background-image: url("assets/icono-movimiento-dental-3d.png.webp");
+}
