@@ -1,13 +1,23 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
 #masBoton {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 50%;
+    right: 50%;
+    transform: translate(50%, 50%);
     z-index: 1000;
+}
+
+#btn-mas {
+    display: none;
 }
 
 .btn-mas {
@@ -23,36 +33,48 @@ body {
 #masfloat {
     font-size: 24px;
     margin-right: 10px;
+    transition: transform 0.3s ease;
 }
 
 .textoFloat {
     font-size: 16px;
+    color: #007bff;
+    font-weight: bold;
 }
 
 #btnfloat {
     display: none;
     position: fixed;
-    bottom: 100px;
-    right: 20px;
+    bottom: calc(50% + 60px);
+    right: 50%;
+    transform: translateX(50%);
     z-index: 999;
 }
 
-#btn-mas:checked + .contfloat {
+#btn-mas:checked + .btn-mas + #btnfloat {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#btn-mas:checked + .btn-mas #masfloat {
+    transform: rotate(280deg);
 }
 
 .contfloat {
-    display: none;
-    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #f7f7f7;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
 .flobn {
     text-align: center;
-    flex: 1;
+    margin: 5px 0;
 }
 
 .float-img {
