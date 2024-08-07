@@ -53,8 +53,7 @@ body {
 
 #btn-mas:checked + .btn-mas + #btnfloat {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
 }
 
 #btn-mas:checked + .btn-mas #masfloat {
@@ -63,18 +62,14 @@ body {
 
 .contfloat {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #f7f7f7;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    background-color: transparent;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .flobn {
     text-align: center;
-    margin: 5px 0;
+    margin: 5px;
+    transition: transform 0.3s ease;
 }
 
 .float-img {
