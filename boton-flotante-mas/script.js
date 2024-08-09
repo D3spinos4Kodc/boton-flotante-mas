@@ -14,18 +14,22 @@ btnMasContainer.addEventListener("click", () => {
 
     if (btnMas.checked) {
         masBoton.style.transform = "translate(30%, 50%)";
-        btnFloat.style.display = "flex";
+        masBoton.style.width = "200px";
+        masBoton.style.height = "60px";
         floatButtons.forEach((button, index) => {
             setTimeout(() => {
-                button.style.transform = "translateY(0)";
+                button.style.transform = "scale(1)";
                 button.style.opacity = "1";
             }, index * 100);
         });
+        btnFloat.style.display = "flex";
     } else {
         masBoton.style.transform = "translate(50%, 50%)";
+        masBoton.style.width = "60px";
+        masBoton.style.height = "60px";
         floatButtons.forEach((button, index) => {
             setTimeout(() => {
-                button.style.transform = "translateY(20px)";
+                button.style.transform = "scale(0)";
                 button.style.opacity = "0";
             }, index * 100);
         });
